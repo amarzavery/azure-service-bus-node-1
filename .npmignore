@@ -1,0 +1,11 @@
+/node_modules/
+/src/
+/scratch/
+/coverage/
+/.nyc_output/
+/typings/
+/*.tgz
+/dist/**/*.spec.js
+/dist/**/*.spec.js.map
+/dist/**/*.spec.d.ts
+/package-test/

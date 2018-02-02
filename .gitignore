@@ -1,0 +1,17 @@
+# Node
+node_modules/
+npm-debug.log*
+
+# Code Coverage (nyc)
+/coverage/
+/.nyc_output/
+
+# Typescript Output
+dist/
+typings/
+
+# Package tarballs
+/*.tgz
+
+# Scratch
+/scratch/

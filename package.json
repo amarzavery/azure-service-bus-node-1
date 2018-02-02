@@ -1,0 +1,90 @@
+{
+  "name": "azure-servicebus",
+  "version": "0.1.0",
+  "description": "AMQP-based messaging library for Azure Service Bus",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "prepare": "typings install && npm run build",
+    "clean": "rimraf dist",
+    "lint": "tslint src/**/*.ts --fix",
+    "prebuild": "npm run clean && npm run lint",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "pretest": "npm run build",
+    "test": "nyc jasmine --config=jasmine.json",
+    "testc": "npm test && npm run coverage",
+    "pretest-nocover": "npm run build",
+    "test-nocover": "jasmine --config=jasmine.json",
+    "coverage": "opener coverage/index.html",
+    "package-test": "node package-test.js && cd package-test && npm test"
+  },
+  "author": "Microsoft",
+  "license": "MIT",
+  "dependencies": {
+    "@types/debug": "0.0.30",
+    "@types/http-status": "^0.2.30",
+    "@types/node-uuid": "0.0.28",
+    "debug": "^2.5.1",
+    "http-status": "^0.2.3",
+    "node-uuid": "^1.4.7",
+    "remap-istanbul": "0.8.3"
+  },
+  "devDependencies": {
+    "jasmine": "^2.8.0",
+    "@types/mocha": "^2.2.48",
+    "@types/jasmine": "^2.8.6",
+    "mv": "^2.1.1",
+    "nyc": "^11.2.1",
+    "opener": "^1.4.2",
+    "source-map-support": "^0.4.15",
+    "tslint": "^4.1.1",
+    "typescript": "^2.5.2",
+    "typings": "^2.0.0"
+  },
+  "nyc": {
+    "all": true,
+    "include": [
+      "dist/**/*"
+    ],
+    "exclude": [
+      "dist/**/*.spec.js",
+      "dist/**/*.d.ts",
+      "dist/test/**/*",
+      "dist/internalTypes.js"
+    ],
+    "reporter": [
+      "text-summary",
+      "json",
+      "html"
+    ],
+    "require": [
+      "source-map-support/register"
+    ],
+    "watermarks": {
+      "lines": [
+        80,
+        95
+      ],
+      "functions": [
+        80,
+        95
+      ],
+      "branches": [
+        80,
+        95
+      ],
+      "statements": [
+        80,
+        95
+      ]
+    },
+    "check-coverage": true,
+    "lines": 90,
+    "statements": 90,
+    "functions": 90,
+    "branches": 90,
+    "source-map": true,
+    "produce-source-map": true
+  }
+}
