@@ -17,7 +17,7 @@
     "typescript": "^2.5.2"
   },
   "dependencies": {
-    "@azure-iot/azure-sb-messaging": "file:azure-sb-messaging.tgz",
+    "azure-servicebus": "file:azure-servicebus.tgz",
     "fs-lock": "^1.2.0",
     "heapdump": "^0.3.9",
     "yargs": "^8.0.2"

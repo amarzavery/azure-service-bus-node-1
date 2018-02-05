@@ -1,5 +1,5 @@
 import { EventEmitter } from 'events';
-import { Policy, Constants as AMQPConstants } from '@azure-iot/amqp10';
+import { Policy, Constants as AMQPConstants } from 'amqp10';
 import { Receiver } from './receiver';
 import { BrokeredMessage } from './brokeredMessage';
 import { InternalBrokeredMessage } from './internalBrokeredMessage';
@@ -729,7 +729,7 @@ describe('Receiver', () => {
                         jasmine.objectContaining({
                             messageId: message2.properties.messageId
                         }),
-                    ]));
+                    ]) as any);
                 })
                 .catch(fail)
                 .then(done);
@@ -767,7 +767,7 @@ describe('Receiver', () => {
                         jasmine.objectContaining({
                             messageId: undefined
                         })
-                    ]));
+                    ]) as any);
                 })
                 .catch(fail)
                 .then(done);
@@ -810,7 +810,7 @@ describe('Receiver', () => {
                         jasmine.objectContaining({
                             messageId: message2.properties.messageId
                         }),
-                    ]));
+                    ]) as any);
 
                     jasmine.clock().uninstall();
                 })

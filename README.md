@@ -16,7 +16,7 @@ To use this package, simply run the following from your favorite terminal
 editor inside the folder for your project:
 
 ```sh
-npm install --save @azure-iot/azure-sb-messaging
+npm install --save azure-servicebus
 ```
 
 At its most simple, this package allows you to connect to an Azure Service Bus
@@ -34,7 +34,7 @@ fails.
 #### Using a Queue
 
 ```ts
-import {Client as ServiceBusClient, BrokeredMessage} from '@azure-iot/azure-sb-messaging';
+import {Client as ServiceBusClient, BrokeredMessage} from 'azure-servicebus';
 
 // Replace this with your actual connection string
 const connectionString = '<your-service-bus-connection-string>';
@@ -55,7 +55,7 @@ queue.send(message)
 #### Using a Topic
 
 ```ts
-import {Client as ServiceBusClient, BrokeredMessage} from '@azure-iot/azure-sb-messaging';
+import {Client as ServiceBusClient, BrokeredMessage} from 'azure-servicebus';
 
 // Replace this with your actual connection string
 const connectionString = '<your-service-bus-connection-string>';
@@ -91,7 +91,7 @@ topic/subscription combination is usually undesirable.
 #### Using a Queue
 
 ```ts
-import {Client as ServiceBusClient} from '@azure-iot/azure-sb-messaging';
+import {Client as ServiceBusClient} from 'azure-servicebus';
 
 // Replace this with your actual connection string
 const connectionString = '<your-service-bus-connection-string>';
@@ -114,7 +114,7 @@ const listener = queue.onMessage(message => {
 #### Using a Topic/Subscription
 
 ```ts
-import {Client as ServiceBusClient} from '@azure-iot/azure-sb-messaging';
+import {Client as ServiceBusClient} from 'azure-servicebus';
 
 // Replace this with your actual connection string
 const connectionString = '<your-service-bus-connection-string>';
@@ -192,7 +192,7 @@ parameter to the `onMessage()` or `onDeadLetteredMessage()` method for both
 queues and topics:
 
 ```ts
-import {Client as ServiceBusClient, ReceiveMode} from '@azure-iot/azure-sb-messaging';
+import {Client as ServiceBusClient, ReceiveMode} from 'azure-servicebus';
 
 // Replace this with your actual connection string
 const connectionString = '<your-service-bus-connection-string>';

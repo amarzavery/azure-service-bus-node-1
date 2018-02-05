@@ -1,4 +1,4 @@
-import {Constants as AmqpConstants} from '@azure-iot/amqp10';
+import {Constants as AmqpConstants} from 'amqp10';
 import * as uuid from 'node-uuid';
 import { debug } from './utility';
 
@@ -33,7 +33,7 @@ describe('CreditManager', () => {
             const basePolicy: any = { receiverLink: { some: 'policy' } };
             const manager = CreditManager.create(ReceiveMode.PeekLock, 100, 50, basePolicy, debug);
 
-            expect(manager.policy).toEqual({ receiverLink: jasmine.objectContaining(basePolicy.receiverLink) });
+            expect(manager.policy).toEqual({ receiverLink: jasmine.objectContaining(basePolicy.receiverLink) } as any);
             expect(manager.receiverPolicy).toEqual(jasmine.objectContaining(basePolicy.receiverLink));
             expect(manager.receiverPolicy.credit).toEqual(jasmine.any(Function));
             expect((<any>manager.receiverPolicy.attach).rcvSettleMode).toEqual(AmqpConstants.receiverSettleMode.settleOnDisposition);

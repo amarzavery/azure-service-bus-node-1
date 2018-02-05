@@ -1,4 +1,4 @@
-import { Policy, ReceiverLink, Constants as AmqpConstants } from '@azure-iot/amqp10';
+import { Policy, ReceiverLink, Constants as AmqpConstants } from 'amqp10';
 
 import { ReceiveMode, LogFn } from './types';
 import constants from './constants';

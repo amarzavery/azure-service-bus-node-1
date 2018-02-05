@@ -1,7 +1,7 @@
 import * as uuid from 'node-uuid';
 import { EventEmitter } from 'events';
-import { ReceiverLink, Policy, Constants as AMQPConstants } from '@azure-iot/amqp10';
-import Session = require('@azure-iot/amqp10/lib/session');
+import { ReceiverLink, Policy, Constants as AMQPConstants } from 'amqp10';
+import Session = require('amqp10/typings/lib/session');
 
 import { ClientManager } from './clientManager';
 import { BrokeredMessage } from './brokeredMessage';

@@ -1,6 +1,6 @@
 import * as url from 'url';
 import * as uuid from 'node-uuid';
-import { Client as AMQPClient, Policy, Constants as AmqpConstants, SenderLink, ReceiverLink } from '@azure-iot/amqp10';
+import { Client as AMQPClient, Policy, Constants as AmqpConstants, SenderLink, ReceiverLink } from 'amqp10';
 import { LogFn } from './types';
 
 import { parseConnectionString } from './utility';

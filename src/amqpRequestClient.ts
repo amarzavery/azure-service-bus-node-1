@@ -1,10 +1,10 @@
 import { EventEmitter } from 'events';
 import * as path from 'path';
 import * as HttpStatus from 'http-status';
-import { Client as AMQPClient, SenderLink, ReceiverLink, Constants, DescribedType } from '@azure-iot/amqp10';
-import Session = require('@azure-iot/amqp10/lib/session');
-const ForcedType = require('@azure-iot/amqp10/lib/types/forced_type');
-const AMQPArray = require('@azure-iot/amqp10/lib/types/amqp_composites').Array;
+import { Client as AMQPClient, SenderLink, ReceiverLink, Constants, DescribedType } from 'amqp10';
+import Session = require('amqp10/typings/lib/session');
+const ForcedType = require('amqp10/lib/types/forced_type');
+const AMQPArray = require('amqp10/lib/types/amqp_composites').Array;
 import * as uuid from 'node-uuid';
 import { LogFn } from './types';
 
@@ -164,7 +164,7 @@ export class AmqpRequestClient extends EventEmitter {
         // Ideally, we would want something like this instead:
         //
         // const body = translator(['map',
-        //     ['string', 'lock-tokens'], ['array', 'uuid', reorderedLockToken]
+        //     ['string', 'lock-tokens'], ['array', 'node-uuid', reorderedLockToken]
         // ]);
         const body = new ForcedType('map', {
             'lock-tokens': new AMQPArray([reorderedLockToken], 0x98)

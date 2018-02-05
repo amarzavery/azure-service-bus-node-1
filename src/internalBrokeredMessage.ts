@@ -1,5 +1,5 @@
 import * as uuid from 'node-uuid';
-import { ReceiverLink } from '@azure-iot/amqp10';
+import { ReceiverLink } from 'amqp10';
 
 import { BrokeredMessage } from './brokeredMessage';
 import { AmqpRequestClient } from './amqpRequestClient';

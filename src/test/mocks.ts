@@ -1,5 +1,5 @@
 import { EventEmitter } from 'events';
-import { Client as AMQPClient, Policy, SenderLink, ReceiverLink } from '@azure-iot/amqp10';
+import { Client as AMQPClient, Policy, SenderLink, ReceiverLink } from 'amqp10';
 import { CreateLinkGroupOptions, LinkGroup } from '../clientManager';
 import * as uuid from 'node-uuid';
 

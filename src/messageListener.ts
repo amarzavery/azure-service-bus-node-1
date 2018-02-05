@@ -1,5 +1,5 @@
 import { EventEmitter } from 'events';
-import { ReceiverLink } from '@azure-iot/amqp10';
+import { ReceiverLink } from 'amqp10';
 
 import { MessageListener } from './types';
 import { AmqpRequestClient } from './amqpRequestClient';

@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
-    "prepare": "typings install && npm run build",
+    "prepare": "npm run build",
     "clean": "rimraf dist",
     "lint": "tslint src/**/*.ts --fix",
     "prebuild": "npm run clean && npm run lint",
@@ -24,23 +24,22 @@
   "dependencies": {
     "@types/debug": "0.0.30",
     "@types/http-status": "^0.2.30",
-    "@types/node-uuid": "0.0.28",
+    "@types/node-uuid": "^0.0.28",
     "debug": "^2.5.1",
     "http-status": "^0.2.3",
-    "node-uuid": "^1.4.7",
-    "remap-istanbul": "0.8.3"
+    "node-uuid": "^1.4.8",
+    "remap-istanbul": "0.8.3",
+    "amqp10": "amarzavery/node-amqp10#types"
   },
   "devDependencies": {
     "jasmine": "^2.8.0",
-    "@types/mocha": "^2.2.48",
     "@types/jasmine": "^2.8.6",
     "mv": "^2.1.1",
     "nyc": "^11.2.1",
     "opener": "^1.4.2",
     "source-map-support": "^0.4.15",
     "tslint": "^4.1.1",
-    "typescript": "^2.5.2",
-    "typings": "^2.0.0"
+    "typescript": "^2.7.1"
   },
   "nyc": {
     "all": true,

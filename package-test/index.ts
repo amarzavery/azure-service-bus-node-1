@@ -10,7 +10,7 @@ require('fs-lock')({
 import * as os from 'os';
 import * as yargs from 'yargs';
 import * as heapdump from 'heapdump';
-import { Client, BrokeredMessage, ReceiveMode } from '@azure-iot/azure-sb-messaging';
+import { Client, BrokeredMessage, ReceiveMode } from 'azure-servicebus';
 
 const args = yargs
     .usage('npm start -- <connectionString> <queueName>', {

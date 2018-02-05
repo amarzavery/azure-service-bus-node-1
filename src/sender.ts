@@ -1,7 +1,7 @@
 import { EventEmitter } from 'events';
-import { SenderLink } from '@azure-iot/amqp10';
-import { DeliveryState } from '@azure-iot/amqp10/lib/types/delivery_state';
-import Session = require('@azure-iot/amqp10/lib/session');
+import { SenderLink } from 'amqp10';
+import { DeliveryState } from 'amqp10/typings/lib/types/delivery_state';
+import Session = require('amqp10/typings/lib/session');
 import * as uuid from 'node-uuid';
 
 import { ClientManager } from './clientManager';

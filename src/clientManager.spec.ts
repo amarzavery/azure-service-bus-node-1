@@ -46,8 +46,8 @@ describe('ClientManager', () => {
 
     beforeEach(() => {
         // Mock out the amqp client
-        realAmqpClient = require('@azure-iot/amqp10').Client;
-        require('@azure-iot/amqp10').Client = fakeAmqpClient;
+        realAmqpClient = require('amqp10').Client;
+        require('amqp10').Client = fakeAmqpClient;
 
         spyOn(fakeAmqpClient.prototype, 'connect').and.callThrough();
         spyOn(fakeAmqpClient.prototype, 'disconnect').and.callThrough();
@@ -58,7 +58,7 @@ describe('ClientManager', () => {
     });
 
     afterEach(() => {
-        require('@azure-iot/amqp10').Client = realAmqpClient;
+        require('amqp10').Client = realAmqpClient;
         jasmine.clock().uninstall();
     });
 
